@@ -4,3 +4,26 @@
 <%= @car.price_per_day %>
 <%=  link_to "supprimer cette voiture", destroy_car_path(@car), data: {turbo_method: :delete}  %>
 <%=  link_to "modifier", edit_car_path(@car) %>
+<%=  link_to "index", cars_path %>
+<%#
+<div>
+  <%= simple_form_for @booking, url: new_car_booking_path(@car, @booking) do |f| %>
+    <%# <%= f.hidden_field :car, value: @car.id %>
+    <%# <%= f.input :start_date, as: :string, label: "louer",  input_html: { class: "d-none", data: {
+      controller: "flatpickr",
+      flatpickr_target: "beginDate"} }  %>
+    <%# <%= f.input :duration %>
+    <%# <%= f.submit "Validez cette date" %>
+  <%# <% end %>
+<%# </div> %>
+
+
+<div class="container">
+  <%= simple_form_for [@car, @booking] do |f| %>
+    <%= f.input :start_date, placeholder: 'start day', input_html: { data: {
+      controller: "flatpickr",
+      flatpickr_target: "beginDate"} }  %>
+    <%= f.input :duration %>
+    <%= f.submit class: 'btn btn-info button-trouve' %>
+  <% end %>
+</div>
