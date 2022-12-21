@@ -1,0 +1,5 @@
+<% @cars.each do |car| %>
+  <%= link_to "#{car.brand}", car_path(car) %>
+<% end %>
+
+<%= link_to "Ajouter une voiture",  new_car_path(@car)%>

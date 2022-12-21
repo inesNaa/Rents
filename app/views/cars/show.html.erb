@@ -1,0 +1,6 @@
+<%= @car.brand %>
+<%= @car.model %>
+<%= @car.year %>
+<%= @car.price_per_day %>
+<%=  link_to "supprimer cette voiture", destroy_car_path(@car), data: {turbo_method: :delete}  %>
+<%=  link_to "modifier", edit_car_path(@car) %>

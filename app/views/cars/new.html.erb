@@ -1,0 +1,7 @@
+<%= simple_form_for @car do |f| %>
+  <%= f.input :brand %>
+  <%= f.input :model %>
+  <%= f.input  :year, as: :integer %>
+  <%= f.input :price_per_day, as: :integer %>
+  <%= f.button :submit %>
+<% end %>
