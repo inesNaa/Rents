@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_21_155816) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_24_145809) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_21_155816) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "duration"
+    t.boolean "accepted", default: false
     t.index ["car_id"], name: "index_bookings_on_car_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -34,6 +34,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_21_155816) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
+    t.string "city"
+    t.integer "mileage"
+    t.string "fuel"
+    t.string "type_of_vehicle"
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
@@ -47,6 +52,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_21_155816) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
+    t.text "license_plate"
+    t.string "phone_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

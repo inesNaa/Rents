@@ -1,7 +1,6 @@
 class CarsController < ApplicationController
   before_action :set_car, only: %i[edit update destroy]
 
-
   def index
     @cars = Car.all
   end
