@@ -1,6 +1,19 @@
+.nav-title{
+  display: flex;
+  .R-title{
+  color: #F19953;
+  font-size: 35px;
+  align-self: center;
+  }
+  .ents-title{
+    color: white;
+    font-size: 20px;
+    align-self: center;
+  }
+}
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: #011638;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +22,12 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+ color: #F19953;
 }

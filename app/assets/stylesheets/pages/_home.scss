@@ -1,1 +1,60 @@
 // Specific CSS for your home-page
+h1{
+  font-size: 25px;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  button {
+    width: 155px;
+    height: 40px;
+    align-self: end;
+  }
+}
+
+.card {
+box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+margin: 20px 30px 15px 0;
+width: 365px;
+height: 560px;
+padding: 10px;
+border-radius: 2px;
+background-color: white;
+
+  h1 {
+    color: #011638;
+  }
+  h3 {
+    color: #5386E4;
+  }
+}
+
+.container-rents {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 20px 20px 20px 20px;
+  background-color: #DADEED;
+  border: 1px solid #DADEED;
+
+}
+
+.home-title {
+  color: #011638;
+  font-size: 35px;
+  text-align: center;
+}
+
+
+.card-rents{
+  img{
+    width: 590px;
+    height: 370px;
+  }
+  h1 {
+    color: #011638;
+    font-size: 30px;
+  }
+}
