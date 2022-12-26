@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
-h1{
-  font-size: 25px;
-}
+// h1{
+//   font-size: 25px;
+// }
 
 .container {
   display: flex;
@@ -15,21 +15,21 @@ h1{
 }
 
 .card {
-box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 margin: 20px 30px 15px 0;
 width: 365px;
 height: 560px;
 padding: 10px;
 border-radius: 2px;
-background-color: white;
-
-  h1 {
-    color: #011638;
-  }
-  h3 {
-    color: #5386E4;
-  }
 }
+
+
+// }
+// h1 {
+//   color: #011638;
+// }
+// h3 {
+//   color: #5386E4;
+// }
 
 .container-rents {
   display: flex;

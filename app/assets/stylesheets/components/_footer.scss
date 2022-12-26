@@ -1,24 +1,23 @@
 .container-footer {
   display: flex;
   justify-content: center;
-
 }
 
 .footer-infos {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-
 }
 
 .infos {
- margin-right: 135px;
+  margin-right: 135px;
 }
 
 .footer-clean {
   padding: 25px 0;
   background-color: #011638;
   color:white;
+  margin-top: auto;
 }
 
 .footer-clean h3 {
@@ -48,7 +47,6 @@
 
 .footer-clean .item.social {
   text-align:right;
-
 }
 
 @media (max-width:767px) {

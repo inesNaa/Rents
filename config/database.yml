@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: sixt_development
+  database: rents_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: sixt_test
+  database: rents_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: sixt_production
-  username: sixt
-  password: <%= ENV["SIXT_DATABASE_PASSWORD"] %>
+  database: rents_production
+  username: rents
+  password: <%= ENV["RENTS_DATABASE_PASSWORD"] %>
