@@ -153,14 +153,14 @@
 .container-actus{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 0 45px;
+  margin: 1em;
 }
 
 .card-actu{
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-bottom: 30px;
+  margin: 5px 5px 20px 20px;
   width: 300px;
   padding: 0 15px;
   background-color: #EEEEEE;

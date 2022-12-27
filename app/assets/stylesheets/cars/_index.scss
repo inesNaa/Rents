@@ -1,0 +1,52 @@
+.main-wrapper{
+display: flex;
+flex-direction: column;
+margin: 20px;
+padding: 10px;
+}
+
+
+.card-informations{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #A0A0A0;
+  h1{
+    font-size: 30px;
+    color: #F19953;
+  }
+
+  p{
+   color: #A0A0A0;
+  }
+
+  .button-index {
+    background-color: #ffdc00;
+    border: none;
+    border-radius: 8px;
+    padding:  10px 30px;
+    .car-link{
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
+.price  {
+  p{
+    color: black;
+  }
+  #first {
+    font-size: 10px;
+  }
+  #second{
+    font-size: 24px;
+    font-weight: bold;
+
+  }
+  #third{
+    font-size: 14px;
+  }
+}
