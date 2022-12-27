@@ -5,28 +5,33 @@
   justify-content: center;
 }
 
-.container-rents {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  padding: 20px 20px 20px 20px;
-  background-color: #EEEEEE;
-}
-
 .home-title {
   color: #011638;
   font-size: 35px;
   text-align: center;
 }
 
+.home-link{
+  text-decoration: none;
+  color: #CD4631;
+  font-size: 15px;
+  font-weight: thin;
+}
+
+.home-link:hover{
+  color:#F19953;
+}
+
 .homepage-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   .body-title {
     display: flex;
     flex-direction: column;
     align-items: baseline;
+    margin: 0 45px;
     h1{
       font-size: 30px;
       margin: 30px 30px 0;
@@ -39,38 +44,17 @@
 }
 
 .container-cars {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 0 45px;
   background-color:#FDFDFF;
-  justify-content: center;
-}
-
-.infos-rents{
-  margin: 0;
-  img{
-    width: 595px;
-    height: 370px;
-  }
-  h1 {
-    color: #011638;
-    font-size: 35px;
-    text-align: justify;
-    margin-bottom: 10px;
-  }
-  p{
-    font-size: 15px;
-    text-align: justify;
-
-  }
 }
 
 .cars-rents {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
   padding: 20px;
   margin: 15px;
+  text-align: center;
   h3{
     color: #F19953;
     font-size: 25px;
@@ -90,34 +74,88 @@
   }
 }
 
-.home-link{
-  text-decoration: none;
-  color: #CD4631;
-  font-size: 15px;
-  font-weight: thin;
+.container-rents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  padding: 20px 20px 20px 20px;
+  background-color: #EEEEEE;
 }
 
-.home-link:hover{
-  color:#F19953;
+.infos-rents{
+  margin: 32px 0 20px 0;
+  img{
+    width: 595px;
+    height: 370px;
+  }
+
+  h1 {
+    color: #011638;
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  p{
+    font-size: 15px;
+    text-align: justify;
+    strong{
+      color: #CD4631;
+    }
+  }
 }
 
-// #D1D1D1
+.list-citys{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
 
+.citys{
+  h5{
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  ul{
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 200;
+    color: black;
+    text-align: left;
+    li:hover{
+      color: #CD4631;
+    }
+  }
+}
+
+.link-citys{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+  h5{
+    font-size: 15px;
+    font-weight: bold;
+    color: #CD4631;
+    text-decoration: none;
+  }
+}
 
 .container-actus{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
+  margin: 0 45px;
 }
 
 .card-actu{
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 20px;
+  margin-bottom: 30px;
   width: 300px;
   padding: 0 15px;
-  background-color: #DDDDDD;
+  background-color: #EEEEEE;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   border-radius: 3px;
 

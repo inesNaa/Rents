@@ -10,7 +10,6 @@
       <div class="cars-search">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui officia voluptate, dignissimos iste laboriosam ipsum sequi quis, temporibus necessitatibus sed eligendi a corporis adipisci iusto distinctio molestias recusandae fugit nostrum?</p>
       </div>
-
     </div>
   </div>
   <div class="homepage-body">
@@ -50,8 +49,8 @@
         <div class="cars-rents">
           <h3>Nos économiques</h3>
           <img src="https://images.ctfassets.net/wmdwnw6l5vg5/71jz89dFBIdA9KHrLh8T0h/50911ced70154f2b311a186e0f48550f/economy.png" alt="">
-          <p>SUV, Berline, Coupé, Cabriolet, Bicorps...</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat optio animi aut, sunt nam dolore modi! Laboriosam, maxime praesentium aspernatur quibusdam repellat deserunt, nemo, ullam sint neque dolore quae.</p>
+          <p>SUV, Berline, Coupé, Cabriolet...</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat optio animi aut, sunt nam dolore modi! Laboriosam, maxime praesentium aspernatur quibusdam repellat deserunt.</p>
           <%= link_to "Voir plus", cars_path(@cars), class:"home-link" %>
         </div>
       </div>
@@ -59,18 +58,47 @@
     <div class="container-rents">
       <div class="infos-rents">
         <h1>Nos agences Rents partout en France</h1>
-        <p>Depuis 1996, Rents a su développer dans toute la France un réseau d’experts qualifiés dans le but de répondre au maximum à la demande des clients. Rents, c’est aujourd’hui plus de 480 points de location, 200 agences franchisées, 100 succursales et 180 points relais réparties partout en France métropolitain et dans les DOM TOM.</p>
+        <p>Depuis 1996, Rents a su développer dans toute la France un réseau d’experts qualifiés dans le but de répondre au maximum à la demande des clients. Rents, c’est aujourd’hui plus de <strong>480</strong> points de location, <strong>200</strong> agences franchisées, <strong>100 </strong>succursales et <strong>180</strong> points relais réparties partout en France métropolitain et dans les DOM TOM.</p>
       </div>
       <div class="infos-rents">
-      <img src="https://www.rentacar.fr/_next/image?url=https%3A%2F%2Frac-production-strapi-uploads.s3.eu-west-3.amazonaws.com%2Fimg_2x_634e25fc56.webp&w=640&q=45"  alt="">
+        <div class="list-citys">
+          <div class="citys">
+            <ul>
+              <h5>France</h5>
+              <li>Marseille</li>
+              <li>Paris</li>
+              <li>Nice</li>
+              <li>Lyon</li>
+              <li>Amiens</li>
+              <li>Aix-en-Provence</li>
+            </ul>
+          </div>
+          <div class="citys">
+            <ul>
+              <h5>DOM/TOM</h5>
+              <li>St Pierre et Miquelon</li>
+              <li>St Barthélémy</li>
+              <li>Guadeloupe</li>
+              <li>Martinique</li>
+              <li>Polynésie Française</li>
+              <li>Nouvelle Calédonie</li>
+            </ul>
+          </div>
+        </div>
+        <%= link_to "/cars", class: "home-link" do %>
+          <div class="link-citys">
+            <h5>Toutes les villes(488)</h5>
+          </div>
+        <% end %>
+      </div>
+      <div class="infos-rents">
+        <img src="https://www.rentacar.fr/_next/image?url=https%3A%2F%2Frac-production-strapi-uploads.s3.eu-west-3.amazonaws.com%2Fimg_2x_634e25fc56.webp&w=640&q=45"  alt="">
       </div>
     </div>
-
     <div class="body-title">
       <h1>News</h1>
       <p>Découvrez les dernières actualités ici !</p>
     </div>
-
     <div class="container-actus">
       <div class="card-actu">
         <img src="https://images.pexels.com/photos/6954256/pexels-photo-6954256.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
