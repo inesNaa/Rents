@@ -55,7 +55,7 @@
 
 .cars-rents {
   padding: 20px;
-  margin: 15px;
+  margin: 5px 5px 20px 20px;
   text-align: center;
   h3{
     color: #F19953;
@@ -126,9 +126,15 @@
     font-weight: 200;
     color: black;
     text-align: left;
+
+    li {
+      font-size: 13px;
+    }
+
     li:hover{
       color: #CD4631;
     }
+
   }
 }
 
