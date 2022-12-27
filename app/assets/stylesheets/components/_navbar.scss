@@ -2,12 +2,12 @@
   display: flex;
   .R-title{
   color: #F19953;
-  font-size: 35px;
+  font-size: 40px;
   align-self: center;
   }
   .ents-title{
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     align-self: center;
   }
 }
@@ -32,4 +32,11 @@
 
 .nav-link:hover {
  color: #F19953;
+}
+
+
+.navbar-home {
+  position: absolute;
+  width: 100%;
+  background: transparent;
 }

@@ -1,44 +1,100 @@
+<% content_for(:navbar_class, "navbar-home") %>
+<% content_for(:footer_class, "footer-home") %>
 <div class="homepage">
-  <div class="main">
-    <div class="banner" style="background-image: url(https://images.pexels.com/photos/13275527/pexels-photo-13275527.jpeg?auto=compress&cs=tinysrgb&w=600);">
+  <div class="hero">
+    <div class="banner">
       <div class="container-banner">
         <h1>Vous cherchez un véhicule ?</h1>
         <h5>Vous êtes au bon endroit</h5>
       </div>
+      <div class="cars-search">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui officia voluptate, dignissimos iste laboriosam ipsum sequi quis, temporibus necessitatibus sed eligendi a corporis adipisci iusto distinctio molestias recusandae fugit nostrum?</p>
+      </div>
+
     </div>
   </div>
-
   <div class="homepage-body">
-    <h1 class="home-title">Notre gamme de véhicules</h1>
-    <div class="home-body" >
-      <div class="cars-rents">
-        <h1>Utilitaires</h1>
-        <h3>Nos types d'utilitaires</h3>
-        <p>Minivan, Pickup, Fourgon, Wagon...</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio saepe veniam assumenda ipsam architecto consequatur autem a aliquid minima beatae maxime odit animi ea in, incidunt non adipisci laboriosam inventore!</p>
-        <button class="btn-home">Voir les utilitaires</button>
-        <div class="car-img">
-          <img src="https://media.istockphoto.com/id/1303182383/fr/photo/van-de-livraison-commerciale-blanc-disolement-sur-le-blanc.jpg?b=1&s=612x612&w=0&k=20&c=kVjLZ6GyGHXJizd2u4jFVfp7_6g69bk2qRv479uogUQ=" alt="">
+    <div class="body-title">
+      <h1>Notre gamme de véhicules</h1>
+      <p>Choisissez votre véhicule parmi nos nouveaux modèles</p>
+    </div>
+    <div class="container-cars">
+      <div class="card-rents">
+        <div class="cars-rents">
+          <h3>Nos utilitaires</h3>
+          <img src="https://images.ctfassets.net/wmdwnw6l5vg5/7MXwlGGHdrV8aNmF2XQLED/74209f2a82b86d8befa381b58fd160e0/van.png" alt="">
+          <p>Minivan, Pickup, Fourgon, Wagon...</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio saepe veniam assumenda ipsam architecto consequatur autem a aliquid minima beatae maxime odit animi ea in, incidunt non adipisci laboriosam inventore!</p>
+          <%= link_to "Voir plus", cars_path(@cars), class:"home-link"  %>
+        </div>
       </div>
+      <div class="card-rents">
+        <div class="cars-rents">
+          <h3>Nos berlines</h3>
+          <img src="https://images.ctfassets.net/wmdwnw6l5vg5/7eSknBlxG6vxlTW1aPj3Ao/a3d5c9afb70ced264344c3e5be27b508/Hyundai_Kona_trasparent_2__1_-min.png" alt="">
+          <p>Minivan, Pickup, Fourgon, Wagon...</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio saepe veniam assumenda ipsam architecto consequatur autem a aliquid minima beatae maxime odit animi ea in, incidunt non adipisci laboriosam inventore!</p>
+          <%= link_to "Voir plus", cars_path(@cars), class:"home-link"  %>
+        </div>
+      </div>
+      <div class="card-rents">
+        <div class="cars-rents">
+          <h3>Nos prestiges</h3>
+          <img src="https://images.ctfassets.net/wmdwnw6l5vg5/FKkhunbxg0hIIHkl7tOkM/1f97e75bd48ac70cd3020b375c53b21b/luxury.png" alt="">
+          <p>Minivan, Pickup, Fourgon, Wagon...</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio saepe veniam assumenda ipsam architecto consequatur autem a aliquid minima beatae maxime odit animi ea in, incidunt non adipisci laboriosam inventore!</p>
+          <%= link_to "Voir plus", cars_path(@cars), class:"home-link" %>
+        </div>
+      </div>
+      <div class="card-rents">
+        <div class="cars-rents">
+          <h3>Nos économiques</h3>
+          <img src="https://images.ctfassets.net/wmdwnw6l5vg5/71jz89dFBIdA9KHrLh8T0h/50911ced70154f2b311a186e0f48550f/economy.png" alt="">
+          <p>SUV, Berline, Coupé, Cabriolet, Bicorps...</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat optio animi aut, sunt nam dolore modi! Laboriosam, maxime praesentium aspernatur quibusdam repellat deserunt, nemo, ullam sint neque dolore quae.</p>
+          <%= link_to "Voir plus", cars_path(@cars), class:"home-link" %>
+        </div>
+      </div>
+    </div>
+    <div class="container-rents">
+      <div class="infos-rents">
+        <h1>Nos agences Rents partout en France</h1>
+        <p>Depuis 1996, Rents a su développer dans toute la France un réseau d’experts qualifiés dans le but de répondre au maximum à la demande des clients. Rents, c’est aujourd’hui plus de 480 points de location, 200 agences franchisées, 100 succursales et 180 points relais réparties partout en France métropolitain et dans les DOM TOM.</p>
+      </div>
+      <div class="infos-rents">
+      <img src="https://www.rentacar.fr/_next/image?url=https%3A%2F%2Frac-production-strapi-uploads.s3.eu-west-3.amazonaws.com%2Fimg_2x_634e25fc56.webp&w=640&q=45"  alt="">
+      </div>
+    </div>
 
-      <div class="cars-rents">
-        <h1>Voitures</h1>
-        <h3>Nos types de voitures</h3>
-        <p>SUV, Berline, Coupé, Cabriolet, Bicorps...</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat optio animi aut, sunt nam dolore modi! Laboriosam, maxime praesentium aspernatur quibusdam repellat deserunt, nemo, ullam sint neque dolore quae.</p>
-        <button class="btn-home">Voir les voitures</button>
-        <div class="car-img">
-          <img src="https://media.istockphoto.com/id/1150931120/fr/photo/illustration-3d-de-la-voiture-compacte-blanche-g%C3%A9n%C3%A9rique-vue-de-face.jpg?b=1&s=612x612&w=0&k=20&c=166JE993-RQ_NlmBVJCUbPJzG-S-kKKN6YLHFfL2baI=" alt="">
-        </div>
+    <div class="body-title">
+      <h1>News</h1>
+      <p>Découvrez les dernières actualités ici !</p>
+    </div>
+
+    <div class="container-actus">
+      <div class="card-actu">
+        <img src="https://images.pexels.com/photos/6954256/pexels-photo-6954256.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        <h3>Location de véhicules en self-service</h3>
+        <%= link_to "Voir plus", cars_path(@cars), class:"home-link" %>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
-      <div class="container-rents">
-        <div class="card-rents">
-          <h1>Nos agences Rents partout en France</h1>
-          <p>Depuis 1996, Rents a su développer dans toute la France un réseau d’experts qualifiés dans le but de répondre au maximum à la demande des clients. Rent A Car, c’est aujourd’hui plus de 480 points de location, 200 agences franchisées, 100 succursales et 180 points relais réparties partout en France métropolitain et dans les DOM TOM.</p>
-        </div>
-        <div class="card-rents">
-        <img src="https://www.rentacar.fr/_next/image?url=https%3A%2F%2Frac-production-strapi-uploads.s3.eu-west-3.amazonaws.com%2Fimg_2x_634e25fc56.webp&w=640&q=45" alt="">
-        </div>
+      <div class="card-actu">
+        <img src="https://images.pexels.com/photos/8478218/pexels-photo-8478218.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        <h3>Location de véhicules en self-service</h3>
+        <%= link_to "Voir plus", cars_path(@cars), class:"home-link" %>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="card-actu">
+        <img src="https://images.pexels.com/photos/7152585/pexels-photo-7152585.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        <h3>Location de véhicules en self-service</h3>
+        <%= link_to "Voir plus", cars_path(@cars), class:"home-link" %>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="card-actu">
+        <img src="https://images.pexels.com/photos/5356272/pexels-photo-5356272.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        <h3>Location de véhicules en self-service</h3>
+        <%= link_to "Voir plus", cars_path(@cars), class:"home-link" %>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
   </div>

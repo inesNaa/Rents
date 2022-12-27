@@ -1,44 +1,16 @@
 // Specific CSS for your home-page
-// h1{
-//   font-size: 25px;
-// }
-
 .container {
   display: flex;
   text-align: center;
   justify-content: center;
-  button {
-    width: 155px;
-    height: 40px;
-    align-self: end;
-  }
 }
-
-.card {
-margin: 20px 30px 15px 0;
-width: 365px;
-height: 560px;
-padding: 10px;
-border-radius: 2px;
-}
-
-
-// }
-// h1 {
-//   color: #011638;
-// }
-// h3 {
-//   color: #5386E4;
-// }
 
 .container-rents {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   padding: 20px 20px 20px 20px;
-  background-color: #DADEED;
-  border: 1px solid #DADEED;
-
+  background-color: #EEEEEE;
 }
 
 .home-title {
@@ -47,14 +19,127 @@ border-radius: 2px;
   text-align: center;
 }
 
+.homepage-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .body-title {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    h1{
+      font-size: 30px;
+      margin: 30px 30px 0;
+    }
+    p{
+      font-size: 15px;
+      color: #A0A0A0;
+    }
+  }
+}
 
-.card-rents{
+.container-cars {
+  display: flex;
+  flex-direction: row;
+  background-color:#FDFDFF;
+  justify-content: center;
+}
+
+.infos-rents{
+  margin: 0;
   img{
-    width: 590px;
+    width: 595px;
     height: 370px;
   }
   h1 {
     color: #011638;
-    font-size: 30px;
+    font-size: 35px;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  p{
+    font-size: 15px;
+    text-align: justify;
+
+  }
+}
+
+.cars-rents {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  margin: 15px;
+  h3{
+    color: #F19953;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  p{
+    color: #A0A0A0;
+    font-size: 15px;
+    font-weight: 200;
+    text-align: justify;
+  }
+
+  img{
+    width: 250px;
+    height: 200px;
+  }
+}
+
+.home-link{
+  text-decoration: none;
+  color: #CD4631;
+  font-size: 15px;
+  font-weight: thin;
+}
+
+.home-link:hover{
+  color:#F19953;
+}
+
+// #D1D1D1
+
+
+.container-actus{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.card-actu{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px;
+  width: 300px;
+  padding: 0 15px;
+  background-color: #DDDDDD;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 3px;
+
+  .home-link{
+    text-align: left;
+  }
+
+  img{
+    width: 300px;
+    height: 230px;
+    align-self: center;
+    border-radius: 3px;
+  }
+  h3{
+    margin-top: 5px;
+    color: #011638;
+    font-size: 20px;
+    text-align: left;
+  }
+  p {
+    font-size: 13px;
+    color: black;
+    text-align: justify;
   }
 }
