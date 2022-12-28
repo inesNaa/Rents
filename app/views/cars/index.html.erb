@@ -1,21 +1,25 @@
-<%= link_to "Ajouter une voiture",  new_car_path %>
-
 <div class="main-wrapper">
+  <div class="index-title">
+    <h1>Choisissez votre véhicule</h1>
+    <p>30 disponibles</p>
+  </div>
   <% @cars.each do |car| %>
     <div class="card-selection">
       <div class="card-informations">
         <img src="https://static.europcar.com/carvisuals/450x300/45104_GWY_R.png?app=1.0.0" alt="">
         <div class="informations">
           <h1><%= car.brand %></h1>
-          <p><i class="fa-thin fa-cars"></i><%= car.type_of_vehicle %></p>
-          <p><i class="fa-thin fa-location-pin"></i><%= car.city %></p>
-          <p><i class="fa-thin fa-gas-pump"></i><%= car.fuel %></p>
+          <div class="icon-infos">
+            <p><i class="fa-solid fa-car"></i><%= car.type_of_vehicle %></p>
+            <p><i class="fa-solid fa-location-pin"></i><%= car.city %></p>
+            <p><i class="fa-solid fa-gas-pump"></i><%= car.fuel %></p>
+          </div>
         </div>
         <div class="price">
           <p id="first">A PARTIR DE</p>
           <p id="second"><%= car.price_per_day %>€/Jour</p>
           <p id="third">TOTAL 400€</p>
-          <button class="button-index"> <%= link_to "Selectionner", car_path(car), class:"car-link"%></button>
+          <button class="btn-index"> <%= link_to "Selectionner", car_path(car), class:"car-link"%></button>
         </div>
       </div>
     </div>

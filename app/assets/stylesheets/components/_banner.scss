@@ -53,28 +53,3 @@
 
   }
 }
-
-.search-form-control {
-  position: relative;
-}
-
-.search-form-control .btn {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
-}
-
-.search-form-control .form-control {
-  height: 3.5rem;
-  width: 75vw;
-  margin-left: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.8);
-  border: 1px solid #E7E7E7;
-}
-
-.search-form-control .form-control:focus {
-  border: 1px solid #F19953;
-  outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}

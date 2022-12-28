@@ -16,6 +16,7 @@
   background-color: #011638;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -28,6 +29,7 @@
 
 .nav-link {
   color: white;
+  margin-left: 10px;
 }
 
 .nav-link:hover {

@@ -1,9 +1,50 @@
-<%= simple_form_for @car do |f| %>
-  <%= f.input :brand %>
-  <%= f.input :model %>
-  <%= f.input  :year, as: :integer %>
-  <%= f.input :price_per_day, as: :integer %>
-  <%= f.button :submit %>
-<% end %>
+<div class="new-form">
+  <div>
+    <h3>Inscrire ma voiture</h3>
+  </div>
+  <%= simple_form_for @car do |f| %>
+    <div>
+      <h6>Type de véhicule</h6>
+      <%= f.input :type_of_vehicle %>
+    </div>
 
+    <div>
+      <h6>Quel est la marque ?</h6>
+      <%= f.input :brand, :required => false %>
+    </div>
 
+    <div>
+      <h6>Quel est le modèle?</h6>
+      <%= f.input :model, :required => false %>
+    </div>
+
+    <div>
+      <h6>Année d'immatriculation</h6>
+      <%= f.input  :year, as: :integer, :required => false %>
+    </div>
+
+    <div>
+      <h6>Carburant</h6>
+      <%= f.input :fuel %>
+    </div>
+    <div>
+      <h6>Kilométrage</h6>
+      <%= f.input :mileage, as: :integer %>
+    </div>
+
+    <div>
+      <h6>Ville</h6>
+      <%= f.input :city %>
+    </div>
+
+    <div>
+      <h6>Prix</h6>
+      <%= f.input :price_per_day, as: :integer %>
+    </div>
+    <div>
+      <h6>Commentaires</h6>
+      <%= f.input :description %>
+    </div>
+    <%= f.button :submit, "Soumettre" %>
+  <% end %>
+</div>
