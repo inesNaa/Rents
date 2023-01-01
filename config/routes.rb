@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :cars do
+    resources :steps, only: [:show, :update], controller: 'steps_controllers/car_steps'
     resources :bookings
   end
   resources :cars, only: :destroy, as: :destroy_car
+
 end

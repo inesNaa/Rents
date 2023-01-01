@@ -18,7 +18,7 @@
             <%= link_to "Véhicules", "/cars", class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Louer mon véhicule", "/cars/new", class: "nav-link" %>
+            <%= link_to 'Louer mon véhicule', new_car_path, method: :post, class: "nav-link"  %>
           </li>
           <li class="nav-item">
             <%= link_to "Nos agences", "#", class: "nav-link" %>

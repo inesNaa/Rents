@@ -6,17 +6,11 @@ class CarsController < ApplicationController
   end
 
   def new
-    @car = Car.new
-  end
-
-  def create
-    @car = Car.new(car_params)
-    @car.user = current_user
-    if @car.save
-      redirect_to car_path(@car)
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @user = current_user.id
+    @car = Car.new wizard_complete: false
+    @car.user_id = @user
+    @car.save! validate: false
+    redirect_to car_step_path(@car, Car.form_steps.keys.first)
   end
 
   def show
@@ -27,10 +21,14 @@ class CarsController < ApplicationController
   def edit; end
 
   def update
-    if @car.update(car_params)
-      redirect_to car_path(@car)
-    else
-      redirect_to edit_car_path(@car)
+    respond_to do |format|
+      if @car.update(car_params)
+        format.html { redirect_to @car, notice: "Vos modifications ont bien été enregistrées" }
+        format.json { render :show, status: :ok, location: @car }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @car.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -45,12 +43,7 @@ class CarsController < ApplicationController
     @car = Car.find(params[:id])
   end
 
-  def car_params
-    params.require(:car).permit(:brand, :model, :year, :price_per_day)
-  end
-
   def booking_params
-    params.require(:booking).permit(:start_date, :duration)
+    params.require(:booking).permit(:start_date, :end_date)
   end
-
 end
