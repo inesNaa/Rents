@@ -1,29 +1,34 @@
-<%= turbo_frame_tag dom_id(@car) do %>
-  <%= form_with model: @car, url: wizard_path, data: { turbo_frame: "doors_and_seats", turbo_action: "advance"  }  do |f| %>
-    <% if f.object.errors.any? %>
-      <div class="error_messages">
-        <% f.object.errors.full_messages.each do |error| %>
-          <p><%= error %></p>
-        <% end %>
+<div class="card-new-car">
+  <%= turbo_frame_tag dom_id(@car) do %>
+    <%= form_with model: @car, url: wizard_path, data: { turbo_frame: "doors_and_seats", turbo_action: "advance"  }  do |f| %>
+      <% if f.object.errors.any? %>
+        <div class="error_messages">
+          <% f.object.errors.full_messages.each do |error| %>
+            <p><%= error %></p>
+          <% end %>
+        </div>
+      <% end %>
+
+      <div class="card-sections">
+        <div>
+          <p>Ajoutez plus de détails</p>
+        </div>
+
+        <div>
+          <%= f.label :doors %>
+          <%= f.number_field :doors %>
+        </div>
+
+        <div>
+          <%= f.label :seats %>
+          <%= f.number_field :seats %>
+        </div>
+
+        <div>
+          <%= f.submit 'Next Step' %>
+          <%= link_to "back", wizard_path('energy_and_transmission') %>
+        </div>
       </div>
     <% end %>
-
-    <fieldset>
-      <legend>Doors and Seats</legend>
-
-      <div>
-        <%= f.label :doors %>
-        <%= f.number_field :doors %>
-      </div>
-
-      <div>
-        <%= f.label :seats %>
-        <%= f.number_field :seats %>
-      </div>
-
-      <div>
-        <%= f.submit 'Next Step' %>
-      </div>
-    </fieldset>
   <% end %>
-<% end %>
+</div>

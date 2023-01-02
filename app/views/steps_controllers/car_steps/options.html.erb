@@ -1,24 +1,29 @@
-<%= turbo_frame_tag dom_id(@car) do %>
-  <%= form_with model: @car, url: wizard_path, data: { turbo_frame: "options", turbo_action: "advance"  } do |f| %>
-    <% if f.object.errors.any? %>
-      <div class="error_messages">
-        <% f.object.errors.full_messages.each do |error| %>
-          <p><%= error %></p>
-        <% end %>
+<div class="card-new-car">
+  <%= turbo_frame_tag dom_id(@car) do %>
+    <%= form_with model: @car, url: wizard_path, data: { turbo_frame: "options", turbo_action: "advance"  } do |f| %>
+      <% if f.object.errors.any? %>
+        <div class="error_messages">
+          <% f.object.errors.full_messages.each do |error| %>
+            <p><%= error %></p>
+          <% end %>
+        </div>
+      <% end %>
+
+     <div class="card-sections">
+        <div>
+          <p>Ajoutez plus de détails</p>
+        </div>
+
+        <div>
+          <%= f.label :options %>
+          <%= f.text_field :options %>
+        </div>
+
+        <div>
+          <%= f.submit 'Next Step' %>
+          <%= link_to "back", wizard_path('doors_and_seats') %>
+        </div>
       </div>
     <% end %>
-
-    <fieldset>
-      <legend>Options</legend>
-
-      <div>
-        <%= f.label :options %>
-        <%= f.text_field :options %>
-      </div>
-
-      <div>
-        <%= f.submit 'Next Step' %>
-      </div>
-    </fieldset>
   <% end %>
-<% end %>
+</div>

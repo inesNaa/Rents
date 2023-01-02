@@ -1,33 +1,41 @@
-<%= turbo_frame_tag dom_id(@car) do %>
-  <%= form_with model: @car, url: wizard_path, data: { turbo_frame: "car_details", turbo_action: "advance"  } do |f| %>
-    <% if f.object.errors.any? %>
-      <div class="error_messages">
-        <% f.object.errors.full_messages.each do |error| %>
-          <p><%= error %></p>
-        <% end %>
+<div class="card-new-car">
+  <%= turbo_frame_tag dom_id(@car) do %>
+    <%= form_with model: @car, url: wizard_path, data: { turbo_frame: "car_details", turbo_action: "advance"  } do |f| %>
+      <div class="progress-bar">
+        <div class="progress-bar-value">65%</div>
+        <div class="progress-bar-fill"></div>
+      </div>
+      <% if f.object.errors.any? %>
+        <div class="error_messages">
+          <% f.object.errors.full_messages.each do |error| %>
+            <p><%= error %></p>
+          <% end %>
+        </div>
+      <% end %>
+
+      <div class="card-sections">
+        <div>
+          <p>Quel est le modèle de votre véhicule?</p>
+        </div>
+        <div>
+          <%= f.label :type_of_vehicle %>
+          <%= f.text_field :type_of_vehicle %>
+        </div>
+
+        <div>
+          <%= f.label :brand %>
+          <%= f.text_field :brand %>
+        </div>
+
+        <div>
+          <%= f.label :model %>
+          <%= f.text_field :model %>
+        </div>
+
+        <div>
+          <%= f.submit 'Next Step' %>
+        </div>
       </div>
     <% end %>
-
-    <fieldset>
-      <legend>Car details</legend>
-      <div>
-        <%= f.label :type_of_vehicle %>
-        <%= f.text_field :type_of_vehicle %>
-      </div>
-
-      <div>
-        <%= f.label :brand %>
-        <%= f.text_field :brand %>
-      </div>
-
-      <div>
-        <%= f.label :model %>
-        <%= f.text_field :model %>
-      </div>
-
-      <div>
-        <%= f.submit 'Next Step' %>
-      </div>
-    </fieldset>
   <% end %>
-<% end %>
+</div>

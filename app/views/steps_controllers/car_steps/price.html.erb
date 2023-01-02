@@ -1,30 +1,34 @@
+<div class="card-new-car">
+  <%= turbo_frame_tag dom_id(@car) do %>
+    <%= form_with model: @car, url: wizard_path, data: { turbo_frame: :_top } do |f| %>
+      <% if f.object.errors.any? %>
+        <div class="error_messages">
+          <% f.object.errors.full_messages.each do |error| %>
+            <p><%= error %></p>
+          <% end %>
+        </div>
+      <% end %>
 
-<%= turbo_frame_tag dom_id(@car) do %>
-  <%= form_with model: @car, url: wizard_path, data: { turbo_frame: :_top } do |f| %>
-    <% if f.object.errors.any? %>
-      <div class="error_messages">
-        <% f.object.errors.full_messages.each do |error| %>
-          <p><%= error %></p>
-        <% end %>
+      <div class="card-sections">
+        <div>
+          <p>Prix journalier</p>
+        </div>
+
+        <div>
+          <%= f.label :price_per_day %>
+          <%= f.number_field :price_per_day %>
+        </div>
+
+        <div>
+          <%= f.label :city %>
+          <%= f.text_field :city %>
+        </div>
+
+        <div>
+          <%= f.submit 'Next Step' %>
+          <%= link_to "back", wizard_path('options') %>
+        </div>
       </div>
     <% end %>
-
-    <fieldset>
-      <legend>Price</legend>
-
-      <div>
-        <%= f.label :price_per_day %>
-        <%= f.number_field :price_per_day %>
-      </div>
-
-      <div>
-        <%= f.label :city %>
-        <%= f.text_field :city %>
-      </div>
-
-      <div>
-        <%= f.submit 'Next Step' %>
-      </div>
-    </fieldset>
   <% end %>
-<% end %>
+</div>
