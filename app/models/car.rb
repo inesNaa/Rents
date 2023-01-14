@@ -11,7 +11,7 @@ class Car < ApplicationRecord
     energy_and_transmission: [:fuel, :gearbox],
     doors_and_seats: [:doors, :seats],
     options: [:options],
-    price: [:price_per_day, :city]
+    price: [:price_per_day, :address]
   }
 
   attr_accessor :form_step
@@ -48,7 +48,7 @@ class Car < ApplicationRecord
 
   with_options if: -> { required_for_step?(:price) } do
     validates :price_per_day, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
-    validates :city, presence: true
+    validates :address, presence: true
   end
 
 
@@ -60,4 +60,8 @@ class Car < ApplicationRecord
     ordered_keys = self.class.form_steps.keys.map(&:to_sym)
     !!(ordered_keys.index(step) <= ordered_keys.index(form_step))
   end
+
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end

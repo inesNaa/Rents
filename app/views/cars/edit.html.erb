@@ -1,114 +1,89 @@
-<%# <%= simple_form_for @car do |f| %>
-  <%# <%= f.input :brand %>
-  <%# <%= f.input :model %>
-  <%# <%= f.input  :year, as: :integer %>
-  <%# <%= f.input :price_per_day, as: :integer %>
-  <%# <%= f.button :submit %>
-<%# <% end %>
-
 <%= form_with model: @car, class: "form" do |f| %>
-  <h1 class="text-center"></h1>
-
-  <!-- Progress bar -->
-  <div class="progressbar">
-    <div class="progress" id="progress"></div>
-    <div class="progress-step progress-step-active"></div>
-    <div class="progress-step"></div>
-    <div class="progress-step"></div>
-    <div class="progress-step"></div>
-    <div class="progress-step"></div>
-    <div class="progress-step"></div>
-  </div>
-
-  <!-- Steps -->
-  <div class="form-step form-step-active">
-    <div class="input-group">
+  <div>
+    <div>
       <%= f.label :type_of_vehicle %>
       <%= f.text_field :type_of_vehicle %>
     </div>
-    <div class="input-group">
+    <div>
       <%= f.label :brand %>
       <%= f.text_field :brand %>
     </div>
-    <div class="input-group">
+    <div>
       <%= f.label :model %>
       <%= f.text_field :model %>
     </div>
-    <div class="">
-      <a href="#" class="btn btn-next width-50 ml-auto">suivant</a>
-    </div>
   </div>
 
-  <div class="form-step">
-    <div class="input-group">
+  <div>
+    <div>
       <%= f.label :mileage %>
       <%= f.number_field :mileage %>
     </div>
-    <div class="btns-group">
+    <div>
       <a href="#" class="btn btn-prev">précédent</a>
       <a href="#" class="btn btn-next">suivant</a>
     </div>
   </div>
 
-  <div class="form-step">
-    <div class="input-group">
+  <div>
+    <div>
       <%= f.label :plate_number %>
       <%= f.text_field :plate_number %>
     </div>
-    <div class="input-group">
+    <div>
       <%= f.label :year %>
       <%= f.number_field :year %>
     </div>
-    <div class="input-group">
+    <div>
       <%= f.label :car_country %>
       <%= f.text_field :car_country %>
     </div>
-    <div class="btns-group">
+    <div>
       <a href="#" class="btn btn-prev">précédent</a>
       <a href="#" class="btn btn-next">suivant</a>
     </div>
   </div>
 
-  <div class="form-step">
-    <div class="input-group">
+  <div>
+    <div>
       <%= f.label :fuel %>
       <%= f.text_field :fuel %>
     </div>
-    <div class="input-group">
+    <div>
       <%= f.label :gearbox %>
       <%= f.text_field :gearbox %>
     </div>
-    <div class="btns-group">
+    <div>
       <a href="#" class="btn btn-prev">précédent</a>
       <input type="submit" value="Submit" class="btn" />
     </div>
   </div>
 
-  <div class="form-step">
-    <div class="input-group">
+  <div>
+    <div>
        <%= f.label :doors %>
       <%= f.number_field :doors %>
     </div>
-    <div class="input-group">
+    <div>
      <%= f.label :seats %>
       <%= f.number_field :seats %>
     </div>
-    <div class="btns-group">
+    <div>
       <a href="#" class="btn btn-prev">précédent</a>
       <input type="submit" value="Submit" class="btn" />
     </div>
   </div>
 
-  <div class="form-step">
-    <div class="input-group">
+  <div>
+    <div>
        <%= f.label :options %>
       <%= f.text_field :options %>
     </div>
-    <div class="input-group">
+    <div>
       <%= f.label :price_per_day%>
       <%= f.number_field :price_per_day %>
     </div>
-    <div class="btns-group">
+    <div>
       <a href="#" class="btn btn-prev">précédent</a>
       <input type="submit" value="Submit" class="btn" />
     </div>

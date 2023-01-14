@@ -48,7 +48,7 @@ puts "creating cars"
     brand: Faker::Vehicle.make,
     model: Faker::Vehicle.model,
     year: Faker::Vehicle.year,
-    city: Faker::Address.city,
+    address: Faker::Address.street_address,
     mileage: Faker::Vehicle.mileage,
     fuel: Faker::Vehicle.fuel_type,
     type_of_vehicle: Faker::Vehicle.car_type,

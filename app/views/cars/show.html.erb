@@ -29,14 +29,13 @@
         <h1><%= @car.brand %></h1>
         <div class="icon-infos">
           <p><i class="fa-solid fa-car"></i><%= @car.type_of_vehicle %></p>
-          <p><i class="fa-solid fa-location-pin"></i><%= @car.city %></p>
+          <p><i class="fa-solid fa-location-pin"></i><%= @car.address %></p>
           <p><i class="fa-solid fa-gas-pump"></i><%= @car.fuel %></p>
         </div>
       </div>
       <div class="price">
         <p id="first">A PARTIR DE</p>
         <p id="second"><%= @car.price_per_day %>€/Jour</p>
-        <p id="third">TOTAL 400€</p>
       </div>
     </div>
   </div>
@@ -53,6 +52,8 @@
         <p><%= @car.year %></p>
         <h5>Kms</h5>
         <p><%= @car.mileage %></p>
+        <h5>Options</h5>
+        <p><%= @car.options %></p>
       </div>
     </div>
     <div class="veh-info" id="car-calendar">
