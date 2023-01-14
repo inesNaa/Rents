@@ -8,6 +8,7 @@
 require 'faker'
 puts "Destroying database"
 User.destroy_all
+Car.wizard_not_completed_only.destroy_all
 Car.destroy_all
 Booking.destroy_all
 
@@ -15,7 +16,7 @@ puts "Creating users"
 
 user1 = User.create(
   email: "dorsaf@gmail.com",
-  password: 345678,
+  password: "345678",
   first_name: "dorsaf",
   last_name: "naamane",
   phone_number: "0762231240",
@@ -24,7 +25,7 @@ user1 = User.create(
 
 user2 = User.create(
   email: "najet@gmail.com",
-  password: 123456,
+  password: "123456",
   first_name: "najet",
   last_name: "naamane",
   phone_number: "0762231241",
@@ -33,7 +34,7 @@ user2 = User.create(
 
 user3 = User.create(
   email: "mekki@gmail.com",
-  password: 987654,
+  password: "987654",
   first_name: "mekki",
   last_name: "naamane",
   phone_number: "0762231245",
@@ -63,5 +64,23 @@ puts "creating cars"
   )
   car.save!
 end
+## Juste pour test la map
+Car.create!(
+    brand: Faker::Vehicle.make,
+    model: Faker::Vehicle.model,
+    year: Faker::Vehicle.year,
+    address: "16 Villa Gaudelet, Paris",
+    mileage: Faker::Vehicle.mileage,
+    fuel: Faker::Vehicle.fuel_type,
+    type_of_vehicle: Faker::Vehicle.car_type,
+    price_per_day: Faker::Number.within(range: 30..200),
+    options: Faker::Vehicle.car_options,
+    doors: Faker::Vehicle.doors,
+    plate_number: Faker::Vehicle.license_plate,
+    seats: 5,
+    car_country: "France",
+    gearbox: "Manuelle",
+    user_id: user3.id
+  )
 
 puts "finished"

@@ -1,6 +1,6 @@
 class Car < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   default_scope { where wizard_complete: true }
   scope :wizard_not_completed_only, -> { unscope(where: :wizard_complete).where(wizard_complete: false) }
 
